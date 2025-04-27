@@ -21,13 +21,26 @@ def calc_min_max_temperature(num_list):
     print("Maximum temperature:", max_temp)
     return min_temp, max_temp
 
+def calc_median_temperature(num_list):
+    
+    sorted_list = sorted(num_list)
+    n = len(sorted_list)
+    if n % 2 == 0:
+        median = (sorted_list[n//2 - 1] + sorted_list[n//2]) / 2
+    else:
+        median = sorted_list[n//2]
+    print("Median temperature :", median)
+    return median
+
+
+
 def main():
     print("# Calculator")
     display_main_menu()
     num_list = get_user_input()
-    if num_list:
-        calc_average_temperature(num_list)
-        calc_min_max_temperature(num_list)
+    calc_average_temperature(num_list)
+    calc_min_max_temperature(num_list)
+    calc_median_temperature(num_list)
 
 if __name__ == "__main__":
     main()
