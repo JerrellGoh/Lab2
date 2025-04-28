@@ -9,6 +9,7 @@ def get_user_input():
     num_list = [float(x)for x in num_list]  # Convert to float
     
     return num_list
+
 def calc_average_temperature(num_list):
     average = sum(num_list) / len(num_list)
     print("Average temperature:", average)
